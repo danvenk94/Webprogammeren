@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>oefenopdracht getal raden</title>
+		<style>
+		label, input{display:block;}
+		</style>
+
+</head>
+
+<body>
+
+<form>
+	<label for="invoer"> Getal onder de tien?</label>
+	<input type="text" id="invoer" name="invoer" placeholder="vul een getal in">
+	<input type="button" value="controleer" onclick="raadGetal()">
+
+</form>
+
+<p id="goedfout"> <!--hier komt het antwoord--></p>
+
+<script>
+
+var getal = 8;
+var raadGetal = function(){ 
+	var invoer = document.getElementById("invoer").value;
+
+	if(invoer == getal)
+	{
+		//alert("Ewa ja goed geraden swa");
+		document.getElementById("goedfout").innerHTML = "Goed";
+	}
+
+	else if (invoer > getal) 
+	{
+		//alert("Wel onder de 10 houden swa")
+		document.getElementById("goedfout").innerHTML = "te hoog getal";
+	}
+
+	else 
+	{
+		//alert("no G probeer opnieuw")
+		document.getElementById("goedfout").innerHTML = " bijna probeer opnieuw";
+	}
+}
+
+
+</script>
+</body>
+
+
+</html>
+
+<!-- block neemt alles in beslag brutaal
+	inline neemt alleen de ruimte in die het nodig heeft
